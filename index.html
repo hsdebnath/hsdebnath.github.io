@@ -28,6 +28,42 @@
   <!-- Custom styles for this template -->
   <link href="css/resume.min.css" rel="stylesheet">
 
+  <style>
+    .container {
+      position: relative;
+      width: 100%;
+      float: left;
+      margin: 10px;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: .3s ease;
+      background-color: teal;
+    }
+
+    .container:hover .overlay {
+      opacity: .9;
+    }
+
+    .text {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  </style>
+
 </head>
 
 <body id="page-top">
@@ -108,6 +144,22 @@
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.youtube.com/@PrakritoCinematic/">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="assets/Arindam+_Debnath_Resum`e+Oslo+compressed.pdf">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-download fa-stack-1x fa-inverse"></i>
               </span>
             </a>
           </li>
@@ -231,17 +283,23 @@
           <li class="list-inline-item">
             <i class="devicons devicon-flutter-plain"></i>
           </li>
+        </ul>
+        <ul class="list-inline list-icons">
+
           <li class="list-inline-item">
-            <i class="devicons devicons-android"></i>
+            <i class="devicons devicon-androidstudio-plain"></i>
           </li>
           <li class="list-inline-item">
-            <i class="devicons devicon-unity-original-wordmark"></i>
+            <i class="devicons devicon-unity-original"></i>
           </li>
           <li class="list-inline-item">
-            <i class="devicons devicons-git"></i>
+            <i class="devicons devicon-git-plain"></i>
           </li>
           <li class="list-inline-item">
-            <i class="devicons devicons-docker"></i>
+            <i class="devicons devicon-docker-plain"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicons devicon-trello-plain-wordmark"></i>
           </li>
         </ul>
 
@@ -267,6 +325,91 @@
       </div>
     </section>
 
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="gallery">
+      <div class="my-auto">
+        <h2 class="mb-5">Gallery</h2>
+        <!-- Gallery -->
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <div class="container">
+              <img src="img/fida.png" class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+              <div class="overlay">
+                <div class="text">
+                  <p>
+                    <strong>Flutter App</strong> <br> built with flutter containing Interavtive E-learning Courses
+                    (SCORM)
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <img src="img/flappy.png" class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" />
+              <div class="overlay">
+                <div class="text">
+                  <p>
+                    <strong>2D Game</strong> <br> simple 2d game built with Unity
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="container">
+              <img src="img/realrju.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+              <div class="overlay">
+                <div class="text">
+                  <p>
+                    <strong>AR App</strong> <br> Android app with interactive Augmented Reality features
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <img src="img/swisscontact.png" class="w-100 shadow-1-strong rounded mb-4"
+                alt="Mountains in the Clouds" />
+              <div class="overlay">
+                <div class="text">
+                  <p>
+                    <strong>Moodle LMS</strong> <br> Learning Management System made with Moodle
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="container">
+              <img src="img/remedive.png" class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" />
+              <div class="overlay">
+                <div class="text">
+                  <p>
+                    <strong>E-Commerce</strong> <br> Medicine store & appointment booking site built with Laravel &
+                    VueJs
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <img src="img/navy.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
+              <div class="overlay">
+                <div class="text">
+                  <p>
+                    <strong>AR App</strong> <br> Android app with interactive Augmented Reality features
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Gallery -->
+      </div>
+    </section>
+
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
       <div class="my-auto">
         <h2 class="mb-5">Interests</h2>
@@ -277,37 +420,33 @@
           I spend a large amount of my free time exploring the latest technolgy advancements
           in the web development world.</p>
       </div>
-    </section>
 
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="gallery">
-      <div class="my-auto">
-        <h2 class="mb-5">Gallery</h2>
-        <!-- Gallery -->
-        <div class="row">
-          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <img src="img/fida.png" class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water"
-              style="border: 2px solid black;" />
+      <div class="row">
 
-            <img src="img/flappy.png" class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" />
-          </div>
-
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <img src="img/realrju.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water"
-              style="border: 2px solid black;" />
-
-            <img src="img/swisscontact.png" class="w-100 shadow-1-strong rounded mb-4" alt="Mountains in the Clouds"
-              style="border: 2px solid black;" />
-
-          </div>
-
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <img src="img/remedive.png" class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea"
-              style="border: 2px solid black;" />
-
-            <img src="img/navy.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
+        <div class="col-lg-3 col-md-12 mb-3 mb-lg-0">
+          <div class="container">
+            <img src="img/bicycle.JPG" class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
           </div>
         </div>
-        <!-- Gallery -->
+
+        <div class="col-lg-3 mb-3 mb-lg-0">
+          <div class="container">
+            <img src="img/climbing.JPG" class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+          </div>
+        </div>
+
+        <div class="col-lg-3 mb-3 mb-lg-0">
+          <div class="container">
+            <img src="img/clouds.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" />
+          </div>
+        </div>
+
+        <div class="col-lg-3 mb-3 mb-lg-0">
+          <div class="container">
+            <img src="img/camp.JPG" class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" />
+          </div>
+        </div>
+
       </div>
     </section>
 
