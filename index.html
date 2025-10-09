@@ -64,6 +64,290 @@
       transform: translate(-50%, -50%);
       text-align: center;
     }
+
+    /* Project Card Styles */
+    .project-card {
+      border: none;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      overflow: hidden;
+      height: 100%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-image {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .project-content {
+      padding: 1.5rem;
+    }
+
+    .project-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .project-description {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .tech-tag {
+      background: #007bff;
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 15px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .tech-tag.flutter {
+      background: #02569B;
+    }
+
+    .tech-tag.unity {
+      background: #000000;
+    }
+
+    .tech-tag.laravel {
+      background: #FF2D20;
+    }
+
+    .tech-tag.vue {
+      background: #4FC08D;
+    }
+
+    .tech-tag.php {
+      background: #777BB4;
+    }
+
+    .tech-tag.moodle {
+      background: #F98012;
+    }
+
+    .tech-tag.ar {
+      background: #FF6B6B;
+    }
+
+    .tech-tag.android {
+      background: #3DDC84;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .project-link {
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .project-link.primary {
+      background: #007bff;
+      color: white;
+    }
+
+    .project-link.secondary {
+      background: #6c757d;
+      color: white;
+    }
+
+    .project-link:hover {
+      transform: translateY(-2px);
+      text-decoration: none;
+      color: white;
+    }
+
+    /* Category Filter Styles */
+    .category-filters {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .category-btn {
+      background: transparent;
+      border: 2px solid #007bff;
+      color: #007bff;
+      padding: 0.5rem 1.5rem;
+      margin: 0.25rem;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .category-btn.active,
+    .category-btn:hover {
+      background: #007bff;
+      color: white;
+    }
+
+    /* Project Grid */
+    .project-item {
+      transition: all 0.3s ease;
+      margin-bottom: 2rem;
+    }
+
+    .project-item.hidden {
+      display: none;
+    }
+
+    /* Project Card Clickable */
+    .project-card {
+      cursor: pointer;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Modal Styles */
+    .modal-xl {
+      max-width: 1400px;
+    }
+
+    .modal-content {
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .modal-image-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      min-height: 400px;
+      background: #f8f9fa;
+    }
+
+    .modal-full-image {
+      max-width: 100%;
+      max-height: 400px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      display: block;
+    }
+
+    .modal-project-details {
+      padding: 2rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .modal-project-details h4 {
+      color: #333;
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+
+    .modal-project-details p {
+      color: #666;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .modal-project-details .tech-tags {
+      margin-bottom: 0;
+    }
+
+    .modal-header {
+      border-bottom: 1px solid #e9ecef;
+      background: #f8f9fa;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .modal-title {
+      font-weight: 600;
+      color: #333;
+    }
+
+    .close {
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: #666;
+      opacity: 0.8;
+    }
+
+    .close:hover {
+      opacity: 1;
+      color: #333;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .project-content {
+        padding: 1rem;
+      }
+
+      .category-btn {
+        display: block;
+        width: 100%;
+        margin: 0.25rem 0;
+      }
+
+      .project-links {
+        flex-direction: column;
+      }
+
+      .modal-xl {
+        max-width: 95%;
+        margin: 1rem auto;
+      }
+
+      .modal-body .row {
+        flex-direction: column;
+      }
+
+      .modal-image-container {
+        min-height: 200px;
+        padding: 1rem;
+      }
+
+      .modal-full-image {
+        max-height: 250px;
+      }
+
+      .modal-project-details {
+        padding: 1.5rem;
+        min-height: auto;
+      }
+
+      .modal-project-details h4 {
+        font-size: 1.25rem;
+      }
+    }
   </style>
 
 </head>
@@ -426,88 +710,193 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="gallery">
       <div class="my-auto">
-        <h2 class="mb-5">Gallery</h2>
-        <!-- Gallery -->
+        <h2 class="mb-5">Featured Projects</h2>
+
+        <!-- Category Filters -->
+        <div class="category-filters">
+          <button class="category-btn active" data-category="all">All Projects</button>
+          <button class="category-btn" data-category="mobile">Mobile Apps</button>
+          <button class="category-btn" data-category="web">Web Applications</button>
+          <button class="category-btn" data-category="ar">AR/VR</button>
+          <button class="category-btn" data-category="game">Games</button>
+        </div>
+
+        <!-- Projects Grid -->
         <div class="row">
-          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <div class="container">
-              <img src="img/fida.png" class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
-              <div class="overlay">
-                <div class="text">
-                  <small>
-                    <strong>Flutter App</strong> <br> built with flutter containing Interavtive E-learning Courses
-                    (SCORM)
-                  </small>
-                </div>
-              </div>
-            </div>
-
-            <div class="container">
-              <img src="img/flappy.png" class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" />
-              <div class="overlay">
-                <div class="text">
-                  <small>
-                    <strong>2D Game</strong> <br> simple 2d game built with Unity
-                  </small>
+          <!-- FIDA Flutter App -->
+          <div class="col-lg-4 col-md-6 project-item" data-category="mobile">
+            <div class="card project-card" data-title="FIDA - Interactive E-Learning App"
+              data-description="Flutter-based mobile application featuring interactive SCORM-compliant e-learning courses with offline content support and progress tracking. The app includes comprehensive learning modules, quiz systems, progress tracking, and offline content synchronization capabilities."
+              data-image="img/fida.png" data-category="Mobile Application" data-github="https://github.com/hsdebnath"
+              data-demo="#" data-tech="Flutter,Dart,SCORM">
+              <img src="img/fida.png" class="project-image" alt="FIDA E-Learning App" />
+              <div class="project-content">
+                <h5 class="project-title">FIDA - Interactive E-Learning App</h5>
+                <p class="project-description">
+                  Flutter-based mobile application featuring interactive SCORM-compliant e-learning courses with offline
+                  content support and progress tracking.
+                </p>
+                <div class="tech-tags">
+                  <span class="tech-tag flutter">Flutter</span>
+                  <span class="tech-tag">Dart</span>
+                  <span class="tech-tag">SCORM</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <div class="container">
-              <img src="img/realrju.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
-              <div class="overlay">
-                <div class="text">
-                  <small>
-                    <strong>AR App</strong> <br> Android app with interactive Augmented Reality features
-                  </small>
+          <!-- Flappy Bird Game -->
+          <div class="col-lg-4 col-md-6 project-item" data-category="game">
+            <div class="card project-card" data-title="Flappy Bird - 2D Game"
+              data-description="Classic arcade-style game built with Unity featuring smooth physics, score tracking, and responsive controls with retro-style graphics. Includes high score system, particle effects, and optimized performance for mobile devices."
+              data-image="img/flappy.png" data-category="Game Development" data-github="https://github.com/hsdebnath"
+              data-demo="#" data-tech="Unity,C#,2D Physics">
+              <img src="img/flappy.png" class="project-image" alt="Flappy Bird Game" />
+              <div class="project-content">
+                <h5 class="project-title">Flappy Bird - 2D Game</h5>
+                <p class="project-description">
+                  Classic arcade-style game built with Unity featuring smooth physics, score tracking, and responsive
+                  controls with retro-style graphics.
+                </p>
+                <div class="tech-tags">
+                  <span class="tech-tag unity">Unity</span>
+                  <span class="tech-tag">C#</span>
+                  <span class="tech-tag">2D Physics</span>
                 </div>
               </div>
             </div>
-
-            <div class="container">
-              <img src="img/swisscontact.png" class="w-100 shadow-1-strong rounded mb-4"
-                alt="Mountains in the Clouds" />
-              <div class="overlay">
-                <div class="text">
-                  <small>
-                    <strong>Moodle LMS</strong> <br> Learning Management System made with Moodle
-                  </small>
-                </div>
-              </div>
-            </div>
-
           </div>
 
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <div class="container">
-              <img src="img/remedive.png" class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" />
-              <div class="overlay">
-                <div class="text">
-                  <small>
-                    <strong>E-Commerce</strong> <br> Medicine store & appointment booking site built with Laravel &
-                    VueJs
-                  </small>
+          <!-- University AR App -->
+          <div class="col-lg-4 col-md-6 project-item" data-category="ar">
+            <div class="card project-card" data-title="University AR Experience"
+              data-description="Augmented Reality application for interactive campus tours and educational content visualization using advanced AR tracking. Features include 3D model overlays, interactive information panels, and real-time navigation assistance for students and visitors."
+              data-image="img/realrju.jpeg" data-category="AR/VR Development" data-github="https://github.com/hsdebnath"
+              data-demo="#" data-tech="Unity,ARCore,Android">
+              <img src="img/realrju.jpeg" class="project-image" alt="University AR Experience" />
+              <div class="project-content">
+                <h5 class="project-title">University AR Experience</h5>
+                <p class="project-description">
+                  Augmented Reality application for interactive campus tours and educational content visualization using
+                  advanced AR tracking.
+                </p>
+                <div class="tech-tags">
+                  <span class="tech-tag unity">Unity</span>
+                  <span class="tech-tag ar">ARCore</span>
+                  <span class="tech-tag android">Android</span>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="container">
-              <img src="img/navy.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
-              <div class="overlay">
-                <div class="text">
-                  <small>
-                    <strong>AR App</strong> <br> Android app with interactive Augmented Reality features
-                  </small>
+          <!-- SwissContact LMS -->
+          <div class="col-lg-4 col-md-6 project-item" data-category="web">
+            <div class="card project-card" data-title="SwissContact - Learning Management System"
+              data-description="Customized Moodle LMS with enhanced plugins, user experience improvements, and advanced reporting for professional training programs. Includes custom course management, student progress tracking, and integrated assessment tools."
+              data-image="img/swisscontact.png" data-category="Web Application"
+              data-github="https://github.com/hsdebnath" data-demo="#" data-tech="PHP,Moodle,MySQL">
+              <img src="img/swisscontact.png" class="project-image" alt="SwissContact Learning Management System" />
+              <div class="project-content">
+                <h5 class="project-title">SwissContact - Learning Management System</h5>
+                <p class="project-description">
+                  Customized Moodle LMS with enhanced plugins, user experience improvements, and advanced reporting for
+                  professional training programs.
+                </p>
+                <div class="tech-tags">
+                  <span class="tech-tag php">PHP</span>
+                  <span class="tech-tag moodle">Moodle</span>
+                  <span class="tech-tag">MySQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Remedive E-Commerce -->
+          <div class="col-lg-4 col-md-6 project-item" data-category="web">
+            <div class="card project-card" data-title="Remedive - Healthcare E-commerce Platform"
+              data-description="Full-stack e-commerce solution for medicine ordering and doctor appointments with integrated payment gateways and real-time notifications. Features include inventory management, prescription uploads, telemedicine integration, and secure payment processing."
+              data-image="img/remedive.png" data-category="Web Application" data-github="https://github.com/hsdebnath"
+              data-demo="#" data-tech="Laravel,Vue.js,MySQL">
+              <img src="img/remedive.png" class="project-image" alt="Remedive Healthcare E-commerce" />
+              <div class="project-content">
+                <h5 class="project-title">Remedive - Healthcare E-commerce Platform</h5>
+                <p class="project-description">
+                  Full-stack e-commerce solution for medicine ordering and doctor appointments with integrated payment
+                  gateways and real-time notifications.
+                </p>
+                <div class="tech-tags">
+                  <span class="tech-tag laravel">Laravel</span>
+                  <span class="tech-tag vue">Vue.js</span>
+                  <span class="tech-tag">MySQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navy AR Training -->
+          <div class="col-lg-4 col-md-6 project-item" data-category="ar">
+            <div class="card project-card" data-title="Navy AR Training System"
+              data-description="Advanced AR training application for military personnel featuring interactive 3D models, simulations, and comprehensive training modules. Includes weapon training simulations, tactical scenario practice, and performance analytics."
+              data-image="img/navy.jpeg" data-category="AR/VR Development" data-github="https://github.com/hsdebnath"
+              data-demo="#" data-tech="Unity,Vuforia,Android">
+              <img src="img/navy.jpeg" class="project-image" alt="Navy AR Training System" />
+              <div class="project-content">
+                <h5 class="project-title">Navy AR Training System</h5>
+                <p class="project-description">
+                  Advanced AR training application for military personnel featuring interactive 3D models, simulations,
+                  and comprehensive training modules.
+                </p>
+                <div class="tech-tags">
+                  <span class="tech-tag unity">Unity</span>
+                  <span class="tech-tag ar">Vuforia</span>
+                  <span class="tech-tag android">Android</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Gallery -->
       </div>
     </section>
+
+    <!-- Project Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModalLabel">Project Details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body p-0">
+            <div class="row no-gutters">
+              <div class="col-md-7">
+                <div class="modal-image-container">
+                  <img id="modalImage" src="" alt="" class="modal-full-image">
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="modal-project-details">
+                  <h4 id="modalTitle" class="mb-3"></h4>
+                  <p id="modalDescription" class="mb-4"></p>
+
+                  <div class="mb-4">
+                    <h6 class="text-muted mb-2">Technologies Used:</h6>
+                    <div id="modalTechTags" class="tech-tags"></div>
+                  </div>
+
+                  <div class="mb-3">
+                    <h6 class="text-muted mb-2">Project Category:</h6>
+                    <span id="modalCategory" class="badge badge-primary"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
       <div class="my-auto">
@@ -563,6 +952,80 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/resume.min.js"></script>
+
+  <!-- Project Gallery JavaScript -->
+  <script>
+    $(document).ready(function () {
+      // Project category filtering
+      $('.category-btn').click(function () {
+        const category = $(this).data('category');
+
+        // Update active button
+        $('.category-btn').removeClass('active');
+        $(this).addClass('active');
+
+        // Filter projects with animation
+        if (category === 'all') {
+          $('.project-item').removeClass('hidden').fadeIn(300);
+        } else {
+          $('.project-item').each(function () {
+            const projectCategory = $(this).data('category');
+            if (projectCategory === category) {
+              $(this).removeClass('hidden').fadeIn(300);
+            } else {
+              $(this).addClass('hidden').fadeOut(300);
+            }
+          });
+        }
+      });
+
+      // Project card click to open modal
+      $('.project-card').click(function () {
+        const title = $(this).data('title');
+        const description = $(this).data('description');
+        const image = $(this).data('image');
+        const category = $(this).data('category');
+        const techString = $(this).data('tech');
+
+        // Populate modal content
+        $('#modalTitle').text(title);
+        $('#modalDescription').text(description);
+        $('#modalImage').attr('src', image).attr('alt', title);
+        $('#modalCategory').text(category);
+
+        // Create tech tags
+        const techTags = techString.split(',');
+        const techTagsHtml = techTags.map(tech => {
+          const techClass = tech.toLowerCase().replace(/[^a-z0-9]/g, '');
+          return `<span class="tech-tag ${techClass}">${tech}</span>`;
+        }).join('');
+        $('#modalTechTags').html(techTagsHtml);
+
+        // Show modal
+        $('#projectModal').modal('show');
+      });
+
+      // Add hover effects for project cards
+      $('.project-card').hover(
+        function () {
+          $(this).find('.project-image').css('transform', 'scale(1.05)');
+        },
+        function () {
+          $(this).find('.project-image').css('transform', 'scale(1)');
+        }
+      );
+
+      // Add loading animation on page load
+      $('.project-item').each(function (index) {
+        $(this).css({
+          'opacity': '0',
+          'transform': 'translateY(20px)'
+        }).delay(index * 100).animate({
+          'opacity': '1'
+        }, 500).css('transform', 'translateY(0)');
+      });
+    });
+  </script>
 
 </body>
 
